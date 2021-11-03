@@ -1,0 +1,94 @@
+@import '../../scss/common.scss';
+
+.home-view {
+  .header {
+    // background-image: url(../../images/header-bg.png);
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background-repeat: no-repeat;
+    // background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+  }
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box; // 解决width设置了100%，padding 溢出问题
+    padding: 10px 50px;
+  }
+  .logo {
+    width: 180px;
+  }
+  ul {
+    flex: 1;
+    text-align: right;
+    li {
+      list-style: none;
+      display: inline-block;
+      margin: 0 25px;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: whitesmoke;
+  }
+  .ctn {
+    padding: 10px 20px;
+    @include --gradient-3();
+    border-radius: 50px;
+    &:hover {
+      background: linear-gradient(to bottom right, rgb(255, 111, 92), rgb(255, 207, 145));
+    }
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    padding-top: 5rem;
+  }
+  .header-content,.hero-img {
+    padding: 5rem;;
+  }
+  .hero-img {
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 24%;
+    img {
+      margin-top: 30%;
+    }
+  }
+  .learn-more {
+    padding: 10px 20px;
+    border: 1px solid tomato;
+    border-radius: 50px;
+    color: tomato;
+    margin-right: 30px;
+    &:hover {
+      @include --gradient-3();
+      border: none;
+      color: whitesmoke;
+    }
+  }
+  .header-title {
+    font-size: 7vmin;
+    margin-bottom: 30px;
+    color: #4642FF;
+    width: 50%;
+    margin-top: 25rem;
+  }
+  p {
+    width: 50%;
+    color: #7c7c7c;
+    margin-bottom: 30px;
+  }
+
+}

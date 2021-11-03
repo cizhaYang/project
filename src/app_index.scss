@@ -1,0 +1,32 @@
+$nums: (1,2,3,4,5);
+/*
+  自定义函数
+ */
+@function getFont($num) {
+  @return 12px * $num;
+}
+//混合
+@mixin text-style($color: #fff, $fontSize: 18px) {
+  color: $color;
+  font-size: $fontSize;
+}
+.app {
+  margin-top: 15px;
+  @for $i from 1 through 5 {
+    .app-test-#{$i} {
+      @if $i == 1 {
+        color: #61dafb;
+      } @else if $i == 2 {
+        color: #9721ac;
+      } @else {
+        color: antiquewhite;
+      }
+    }
+  }
+
+  @each $num in $nums {
+    &-test-#{$num} {
+      @include text-style($fontSize: getFont($num))
+    }
+  }
+}

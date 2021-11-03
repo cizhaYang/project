@@ -1,0 +1,12 @@
+@mixin --gradient-1 {
+  background: linear-gradient(to bottom right, rgb(107, 107, 255), blue);
+}
+@mixin --gradient-2 {
+  background: linear-gradient(to bottom right, rgb(80, 80, 255), rgb(253, 119, 119));
+}
+@mixin --gradient-3 {
+  background: linear-gradient(to bottom right, rgb(255, 207, 145),rgb(255, 111, 92));
+}
+@mixin --gradient-4 {
+  background: linear-gradient(to bottom right, #2af598, #009efd);
+}
